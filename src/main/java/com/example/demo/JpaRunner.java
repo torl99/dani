@@ -27,6 +27,9 @@ public class JpaRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+
+        entityManager.createNamedQuery("all_post", Post.class);
+
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Post> query = builder.createQuery(Post.class);
         Root<Post> root = query.from(Post.class);

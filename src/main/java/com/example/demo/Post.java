@@ -7,8 +7,13 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+@NamedQueries({
+    @NamedQuery(name="all_post", query="SELECT p FROM post AS p")
+})
 @Entity
 public class Post {
     @Id @GeneratedValue
