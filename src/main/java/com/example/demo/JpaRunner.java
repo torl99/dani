@@ -22,18 +22,23 @@ public class JpaRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        Post post = new Post();
-        post.setTitle("spring Data Jpa 1");
+        // Post post = new Post();
+        // post.setTitle("spring Data Jpa 1");
 
-        Comment comment1 = new Comment();
-        comment1.setComment("1번 comment");
-        post.addComment(comment1);
+        // Comment comment1 = new Comment();
+        // comment1.setComment("1번 comment");
+        // post.addComment(comment1);
 
-        Comment comment2 = new Comment();
-        comment2.setComment("2번 comment");
-        post.addComment(comment2);
+        // Comment comment2 = new Comment();
+        // comment2.setComment("2번 comment");
+        // post.addComment(comment2);
 
         Session session = entityManager.unwrap(Session.class);
-        session.save(post);
+        Post post = session.get(Post.class, 1l);
+        session.delete(post);
+
+        // Post post = session.get(Post.class, 1l);
+        // session.delete(post);
+
     }
 }
