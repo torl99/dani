@@ -1,31 +1,8 @@
 package com.example.demo;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+public interface PostRepository extends JpaRepository<Post, Long> {
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-@Repository
-@Transactional
-public class PostRepository {
-    
-    @PersistenceContext
-    EntityManager entityManager;
-
-    public Post add(Post post) {
-        entityManager.persist(post);
-        return post;
-    }
-
-    public void delete(Post post) {
-        entityManager.remove(post);
-    }
-
-    public List<Post> findAll() {
-        return entityManager.createQuery("SELECT p FROM Post AS p", Post.class).getResultList();
-    }
     
 }

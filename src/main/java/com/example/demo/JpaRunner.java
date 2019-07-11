@@ -10,6 +10,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -22,14 +23,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class JpaRunner implements ApplicationRunner {
 
-    @PersistenceContext
-    EntityManager entityManager;
+    @Autowired
+    PostRepository postRepository;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
-        List<Post> posts = entityManager.createNativeQuery("select * from Post", Post.class).getResultList();
-
-        posts.forEach(System.out::println);
+        postRepository.findAll().forEach(System.out::println);
     }
 }
