@@ -28,15 +28,8 @@ public class JpaRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        entityManager.createNamedQuery("all_post", Post.class);
+        List<Post> posts = entityManager.createNativeQuery("select * from Post", Post.class).getResultList();
 
-        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-        CriteriaQuery<Post> query = builder.createQuery(Post.class);
-        Root<Post> root = query.from(Post.class);
-        query.select(root);
-
-        List<Post> posts = entityManager.createQuery(query).getResultList();
         posts.forEach(System.out::println);
-
     }
 }
