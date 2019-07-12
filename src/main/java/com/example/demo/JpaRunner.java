@@ -24,10 +24,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class JpaRunner implements ApplicationRunner {
 
     @Autowired
-    PostRepository postRepository;
+    Dani dani;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        postRepository.findAll().forEach(System.out::println);
+        // postRepository.findAll().forEach(System.out::println);
+        System.out.println("======================");
+        System.out.println(dani.getName());
     }
 }
