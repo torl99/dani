@@ -2,7 +2,7 @@ package com.example.demo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.List;
+import java.util.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,16 +19,9 @@ public class CommentRepositoryTest {
 
     @Test
     public void crud() {
-        Comment comment = new Comment();
-        comment.setComment("Hello Comment");
-        commentRepository.save(comment);
-
-        List<Comment> all = commentRepository.findAll();
-        assertThat(all.size()).isEqualTo(1);
-
-        long count = commentRepository.count();
-        assertThat(count).isEqualTo(1);
-        
+        Optional<Comment> byId = commentRepository.findById(100l);
+        assertThat(byId).isEmpty(); // optional 체크
+        Comment comment = byId.orElseThrow(IllegalArgumentException::new);
     }
     
 }
