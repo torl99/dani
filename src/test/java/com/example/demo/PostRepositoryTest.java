@@ -36,7 +36,7 @@ public class PostRepositoryTest {
         assertThat(newPost.getId()).isNotNull();
 
         // When
-        List<Post> posts = postRepository.findAll();
+        List<Post> posts = postRepository.findAll(); // JPA Repository
 
         // Then
         assertThat(posts.size()).isEqualTo(1);
