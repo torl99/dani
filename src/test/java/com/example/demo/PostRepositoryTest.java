@@ -42,13 +42,24 @@ public class PostRepositoryTest {
         assertThat(posts.size()).isEqualTo(1);
         assertThat(posts).contains(newPost);
 
-
         // When
         Page<Post> page = postRepository.findAll(PageRequest.of(0, 10));
-        assertThat(page.getTotalElements()).isEqualTo(1);
-        assertThat(page.getNumber()).isEqualTo(0);
-        assertThat(page.getSize()).isEqualTo(10);
-        assertThat(page.getNumberOfElements()).isEqualTo(1);
+
+        // Then
+        assertThat(page.getTotalElements()).isEqualTo(1); // 전체 Element개수
+        assertThat(page.getNumber()).isEqualTo(0);      // 현재페이지
+        assertThat(page.getSize()).isEqualTo(10);       // 맨 처음에 요청한 10개 (size)
+        assertThat(page.getNumberOfElements()).isEqualTo(1);    // 현재 페이지에 들어올 수 있는개수?
+
+        // When
+        postRepository.findByTitleContains("spring", PageRequest.of(0, 10));
+
+        // Then
+        assertThat(page.getTotalElements()).isEqualTo(1); // 전체 Element개수
+        assertThat(page.getNumber()).isEqualTo(0); // 현재페이지
+        assertThat(page.getSize()).isEqualTo(10); // 맨 처음에 요청한 10개 (size)
+        assertThat(page.getNumberOfElements()).isEqualTo(1); // 현재 페이지에 들어올 수 있는개수?
+
     }
     
 }
