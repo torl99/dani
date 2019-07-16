@@ -60,6 +60,11 @@ public class PostRepositoryTest {
         assertThat(page.getSize()).isEqualTo(10); // 맨 처음에 요청한 10개 (size)
         assertThat(page.getNumberOfElements()).isEqualTo(1); // 현재 페이지에 들어올 수 있는개수?
 
+        // When
+        Long spring = postRepository.countByTitleContains("spring");
+        
+        //Then
+        assertThat(spring).isEqualTo(1);
     }
     
 }
