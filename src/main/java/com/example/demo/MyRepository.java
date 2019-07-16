@@ -13,4 +13,6 @@ public interface MyRepository<T, id extends Serializable> extends Repository<T, 
     <E extends T> E save(E entity);
 
     List<T> findAll();
+
+    long count();
 }
