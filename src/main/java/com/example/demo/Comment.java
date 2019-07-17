@@ -15,6 +15,8 @@ public class Comment {
 
     private String comment;
 
+    private int like;
+
     @ManyToOne(fetch = FetchType.EAGER)
     private Post post;
 
@@ -46,6 +48,18 @@ public class Comment {
 
     public void setPost(Post post) {
         this.post = post;
+    }
+
+
+
+    public int getLike() {
+        return like;
+    }
+
+
+
+    public void setLike(int like) {
+        this.like = like;
     }
 
     
