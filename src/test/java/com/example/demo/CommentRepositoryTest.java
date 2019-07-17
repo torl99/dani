@@ -1,5 +1,6 @@
 package com.example.demo;
 
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.*;
@@ -19,9 +20,8 @@ public class CommentRepositoryTest {
 
     @Test
     public void crud() {
-        // Optional<Comment> byId = commentRepository.findById(100l);
-        // assertThat(byId).isEmpty(); // optional 체크
-        // Comment comment = byId.orElseThrow(IllegalArgumentException::new);
+        List<Comment> comments = commentRepository.findAll();
+        assertThat(comments).isEmpty();
     }
     
 }
