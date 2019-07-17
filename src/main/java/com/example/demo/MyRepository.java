@@ -5,15 +5,18 @@ import java.util.*;
 
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.Repository;
+import org.springframework.lang.Nullable;
 
 @NoRepositoryBean
 public interface MyRepository<T, Id extends Serializable> extends Repository<T, Id> {
 
     
-    <E extends T> E save(E entity);
+    <E extends T> E save(@Nullable E entity);
 
     List<T> findAll();
 
     long count();
-    <E extends T> Optional<E> findById(Id id);
+    
+    @Nullable
+    <E extends T> E findById(Id id);
 }
