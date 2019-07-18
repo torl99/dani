@@ -15,7 +15,8 @@ public class Comment {
 
     private String comment;
 
-    private int like;
+    
+    private int likeCount;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Post post;
@@ -52,14 +53,14 @@ public class Comment {
 
 
 
-    public int getLike() {
-        return like;
+    public int getLikeCount() {
+        return likeCount;
     }
 
 
 
-    public void setLike(int like) {
-        this.like = like;
+    public void setLikeCount(int likeCount) {
+        this.likeCount = likeCount;
     }
 
     
