@@ -1,0 +1,261 @@
+# Created at 2019-07-18T09:53:56.362
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+
+# Created at 2019-07-18T09:53:56.947
+Unexpected IOException with stream: 2019-07-18 09:53:56.916  INFO 16464 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+
+
+# Created at 2019-07-18T09:53:57.379
+Unexpected IOException with stream: 2019-07-18 09:53:57.378  INFO 16464 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 390ms. Found 2 repository interfaces.
+
+
+# Created at 2019-07-18T09:53:57.864
+Unexpected IOException with stream: 2019-07-18 09:53:57.862  INFO 16464 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+
+
+# Created at 2019-07-18T09:53:58.761
+Unexpected IOException with stream: 2019-07-18 09:53:58.760  INFO 16464 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:168c3298-c5bd-456f-9177-a4a352fb7847;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+
+
+# Created at 2019-07-18T09:54:00.728
+Unexpected IOException with stream: 2019-07-18 09:54:00.727  INFO 16464 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+
+
+# Created at 2019-07-18T09:54:01.054
+Unexpected IOException with stream: 2019-07-18 09:54:01.047  INFO 16464 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+
+
+# Created at 2019-07-18T09:54:01.099
+Unexpected IOException with stream: 2019-07-18 09:54:01.098  INFO 16464 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+
+
+# Created at 2019-07-18T09:54:02.022
+Unexpected IOException with stream: 2019-07-18 09:54:02.020  INFO 16464 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+
+
+# Created at 2019-07-18T09:54:02.609
+Unexpected IOException with stream: 2019-07-18 09:54:02.608  INFO 16464 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+
+
+# Created at 2019-07-18T09:54:02.839
+Unexpected IOException with stream: 2019-07-18 09:54:02.838  INFO 16464 --- [           main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+
+
+# Created at 2019-07-18T09:54:05.512
+Unexpected IOException with stream: 2019-07-18 09:54:05.510 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    create table account (
+       id bigint not null,
+        city varchar(255),
+        state varchar(255),
+        street varchar(255),
+        zip_code varchar(255),
+        created timestamp,
+        password varchar(255),
+        username varchar(255),
+        yes varchar(255),
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.536
+Unexpected IOException with stream: Hibernate: 
+    
+    create table account (
+       id bigint not null,
+        city varchar(255),
+        state varchar(255),
+        street varchar(255),
+        zip_code varchar(255),
+        created timestamp,
+        password varchar(255),
+        username varchar(255),
+        yes varchar(255),
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.605
+Unexpected IOException with stream: 2019-07-18 09:54:05.604 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    create table comment (
+       id bigint not null,
+        comment varchar(255),
+        like_count integer not null,
+        post_id bigint,
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.620
+Unexpected IOException with stream: Hibernate: 
+    
+    create table comment (
+       id bigint not null,
+        comment varchar(255),
+        like_count integer not null,
+        post_id bigint,
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.639
+Unexpected IOException with stream: 2019-07-18 09:54:05.636 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    create table post (
+       id bigint not null,
+        title varchar(255),
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.660
+Unexpected IOException with stream: Hibernate: 
+    
+    create table post (
+       id bigint not null,
+        title varchar(255),
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.681
+Unexpected IOException with stream: 2019-07-18 09:54:05.679 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    create table study (
+       id bigint not null,
+        name varchar(255),
+        owner_id bigint,
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.696
+Unexpected IOException with stream: Hibernate: 
+    
+    create table study (
+       id bigint not null,
+        name varchar(255),
+        owner_id bigint,
+        primary key (id)
+    )
+
+
+# Created at 2019-07-18T09:54:05.733
+Unexpected IOException with stream: 2019-07-18 09:54:05.727 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    alter table account 
+       drop constraint if exists UK_gex1lmaqpg0ir5g1f5eftyaa1
+
+
+# Created at 2019-07-18T09:54:05.773
+Unexpected IOException with stream: Hibernate: 
+    
+    alter table account 
+       drop constraint if exists UK_gex1lmaqpg0ir5g1f5eftyaa1
+
+
+# Created at 2019-07-18T09:54:05.793
+Unexpected IOException with stream: 2019-07-18 09:54:05.791 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    alter table account 
+       add constraint UK_gex1lmaqpg0ir5g1f5eftyaa1 unique (username)
+
+
+# Created at 2019-07-18T09:54:05.807
+Unexpected IOException with stream: Hibernate: 
+    
+    alter table account 
+       add constraint UK_gex1lmaqpg0ir5g1f5eftyaa1 unique (username)
+
+
+# Created at 2019-07-18T09:54:05.827
+Unexpected IOException with stream: 2019-07-18 09:54:05.826 DEBUG 16464 --- [           main] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+
+
+# Created at 2019-07-18T09:54:05.840
+Unexpected IOException with stream: Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+
+
+# Created at 2019-07-18T09:54:05.858
+Unexpected IOException with stream: 2019-07-18 09:54:05.856 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    alter table comment 
+       add constraint FKs1slvnkuemjsq2kj4h3vhx7i1 
+       foreign key (post_id) 
+       references post
+
+
+# Created at 2019-07-18T09:54:05.870
+Unexpected IOException with stream: Hibernate: 
+    
+    alter table comment 
+       add constraint FKs1slvnkuemjsq2kj4h3vhx7i1 
+       foreign key (post_id) 
+       references post
+
+
+# Created at 2019-07-18T09:54:05.889
+Unexpected IOException with stream: 2019-07-18 09:54:05.887 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    
+    alter table study 
+       add constraint FK210g5r7wftvloq2ics531e6e4 
+       foreign key (owner_id) 
+       references account
+
+
+# Created at 2019-07-18T09:54:05.899
+Unexpected IOException with stream: Hibernate: 
+    
+    alter table study 
+       add constraint FK210g5r7wftvloq2ics531e6e4 
+       foreign key (owner_id) 
+       references account
+
+
+# Created at 2019-07-18T09:54:05.938
+Unexpected IOException with stream: 2019-07-18 09:54:05.936  INFO 16464 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+
+# Created at 2019-07-18T09:54:08.837
+Unexpected IOException with stream: 2019-07-18 09:54:08.834  INFO 16464 --- [           main] com.example.demo.CommentRepositoryTest   : Started CommentRepositoryTest in 14.85 seconds (JVM running for 18.002)
+
+
+# Created at 2019-07-18T09:54:08.918
+Unexpected IOException: 5,1,com.example.demo.CommentRepositoryTest,crud(com.example.demo.CommentRepositoryTest),null,null,null
+
+
+# Created at 2019-07-18T09:54:09.004
+Unexpected IOException with stream: 2019-07-18 09:54:08.994  INFO 16464 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@c333c60 testClass = CommentRepositoryTest, testInstance = com.example.demo.CommentRepositoryTest@693fe6c9, testMethod = crud@CommentRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@79da8dc5 testClass = CommentRepositoryTest, locations = '{}', classes = '{class com.example.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@1eb5174b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5f058f00, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1afd44cb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5e0826e7, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@1c0db7ab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@245b4bdc], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@4468fda8]; rollback [true]
+
+
+# Created at 2019-07-18T09:54:09.827
+Unexpected IOException with stream: 2019-07-18 09:54:09.825 DEBUG 16464 --- [           main] org.hibernate.SQL                        : 
+    call next value for hibernate_sequence
+
+
+# Created at 2019-07-18T09:54:09.875
+Unexpected IOException with stream: Hibernate: 
+    call next value for hibernate_sequence
+
+
+# Created at 2019-07-18T09:54:09.971
+Unexpected IOException with stream: 2019-07-18 09:54:09.967  INFO 16464 --- [           main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@c333c60 testClass = CommentRepositoryTest, testInstance = com.example.demo.CommentRepositoryTest@693fe6c9, testMethod = crud@CommentRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@79da8dc5 testClass = CommentRepositoryTest, locations = '{}', classes = '{class com.example.demo.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@1eb5174b key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5f058f00, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1afd44cb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@5e0826e7, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@1c0db7ab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@245b4bdc], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+
+
+# Created at 2019-07-18T09:54:10.024
+Unexpected IOException: 6,1,com.example.demo.CommentRepositoryTest,crud(com.example.demo.CommentRepositoryTest),null,null,null
+
+
+# Created at 2019-07-18T09:54:10.068
+Unexpected IOException: 2,1,org.apache.maven.surefire.junit4.JUnit4Provider,com.example.demo.CommentRepositoryTest,null,null,null
+
+
