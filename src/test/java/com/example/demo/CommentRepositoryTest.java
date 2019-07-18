@@ -20,13 +20,21 @@ public class CommentRepositoryTest {
 
     @Test
     public void crud() {
-        Comment comment = new Comment();
-        comment.setLikeCount(100);
-        comment.setComment("spring data JPA");
-        commentRepository.save(comment);
+        
+        this.createComment(100, "spring data JPA");
+        this.createComment(55, "hibernate SPRING");
 
-        List<Comment> comments = commentRepository.findByCommentContainsIgnoreCaseAndLikeCountGreaterThan("Spring", 10);
-        assertThat(comments.size()).isEqualTo(1);
+        List<Comment> comments = commentRepository.findByCommentContainsIgnoreCaseOrderByLikeCountDesc("Spring");
+        assertThat(comments.size()).isEqualTo(2);
+        assertThat(comments).first().hasFieldOrPropertyWithValue("likeCount", 100);
+        
+    }
+
+    private void createComment(int LikeCount, String comment) {
+        Comment newComment = new Comment();
+        newComment.setLikeCount(LikeCount);
+        newComment.setComment(comment);
+        commentRepository.save(newComment);
     }
 
 }
