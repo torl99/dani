@@ -1,10 +1,10 @@
 package com.example.demo;
 
-import org.springframework.data.domain.Page;
+import java.util.stream.Stream;
+
 import org.springframework.data.domain.Pageable;
 
 public interface CommentRepository extends MyRepository<Comment, Long> {
 
-
-    Page<Comment> findByCommentContainsIgnoreCase(String keyword, Pageable pageable);
+    Stream<Comment> findByCommentContainsIgnoreCase(String keyword, Pageable pageable);
 }
